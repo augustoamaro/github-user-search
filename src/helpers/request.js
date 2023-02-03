@@ -9,7 +9,7 @@ const searchUser = async (input, search) => {
             const response = await axios.get(url);
 
             const data = await response.data;
-            const values = getData(data);
+            const values = changeDomValues(data);
 
             return values;
 
@@ -19,16 +19,19 @@ const searchUser = async (input, search) => {
     });
 };
 
-const getData = (data) => {
+const changeDomValues = (value) => {
     const fullName = document.querySelector('[full_name]');
     const login = document.querySelector('[login');
     const joined = document.querySelector('[joined');
+    const bio = document.querySelector('[bio');
 
-    fullName.textContent = data.name;
-    login.textContent = `@${data.login}`
-    joined.textContent = `Joined ${data.created_at}`; // formatar data
+    fullName.textContent = value.name;
+    login.textContent = `@${value.login}`
+    joined.textContent = `Joined ${value.created_at}`; // formatar data
+    bio.textContent = value.bio;
 
-    console.log("aqui", data)
+
+    console.log("aqui", value)
 };
 
-export { searchUser, getData };
+export { searchUser };
