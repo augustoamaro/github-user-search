@@ -3,8 +3,12 @@ import './src/styles/reset.css';
 
 import search from './assets/icon-search.svg';
 import dark from './assets/icon-moon.svg';
+import location from './assets/icon-location.svg';
+import website from './assets/icon-website.svg';
+import twitter from './assets/icon-twitter.svg';
+import company from './assets/icon-company.svg';
 
-import { searchUser } from './src/helpers/request.js'
+import { fetchUserData } from './src/helpers/request.js'
 
 document.querySelector('#app').innerHTML = /*html*/`
   <main>
@@ -28,24 +32,44 @@ document.querySelector('#app').innerHTML = /*html*/`
     </section>
 
     <section class="box">
-    <div class="git-info">
-      <img src="${search}">
-
-      <div>
-        <h1 full_name></h1>
-        <h2 login></h2>
-        <h3 joined></h3>
+      <div class="git-info">
+        <img avatar>
+        <div>
+          <h1 full_name>The Octocat</h1>
+          <h2 login>@octocat</h2>
+          <h3 joined>Joined 25 Jan 2011</h3>
+        </div>
       </div>
-    </div>
-    <p bio>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
 
-    <div class="box-info">
-    
-    </div>
+      <div class="bio-content">
+        <p bio></p>
+      </div>
+
+      <div class="box-info">
+        <div class="repos">
+          <h2>Repos</h2>
+          <span public_repos></span>
+        </div>
+        <div class="followers">
+          <h2>Followers</h2>
+          <span followers></span>
+        </div>
+        <div class="following">
+          <h2>Following</h2>
+          <span following></span>
+        </div>
+      </div>
+
+      <div class="icons">
+        <img src="${location}">
+        <img src="${website}">
+        <img src="${twitter}">
+        <img src="${company}">
+      </div>
     </section>
   </main>
 `
 const input = document.querySelector('[username]')
 const searchBtn = document.querySelector('[search]')
 
-searchUser(input, searchBtn);
+fetchUserData(input, searchBtn);
