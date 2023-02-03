@@ -4,7 +4,7 @@ import './src/styles/reset.css';
 import search from './assets/icon-search.svg';
 import dark from './assets/icon-moon.svg';
 
-import { setupCounter } from './counter.js'
+import { searchUser } from './src/helpers/request.js'
 
 document.querySelector('#app').innerHTML = /*html*/`
   <main>
@@ -20,9 +20,9 @@ document.querySelector('#app').innerHTML = /*html*/`
     <section class="search">
         <img src="${search}">
 
-        <input placeholder="Search GitHub username...">
+        <input username placeholder="Search GitHub username...">
 
-        <div class="btn-search">
+        <div search class="btn-search">
           <span>Search</span>
         </div>
     </section>
@@ -32,12 +32,11 @@ document.querySelector('#app').innerHTML = /*html*/`
       <img src="${search}">
 
       <div>
-        <h1>The Octocat</h1>
+        <h1></h1>
         <h2>@octocat</h2>
         <h3>Joined 25 Jan 2011</h3>
       </div>
     </div>
-
     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
 
     <div>
@@ -46,5 +45,12 @@ document.querySelector('#app').innerHTML = /*html*/`
     </section>
   </main>
 `
+const input = document.querySelector('[username]')
+const searchBtn = document.querySelector('[search]')
 
-setupCounter(document.querySelector('#counter'))
+searchUser(input, searchBtn);
+
+
+
+
+
