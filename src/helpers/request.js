@@ -7,12 +7,28 @@ const searchUser = async (input, search) => {
 
         try {
             const response = await axios.get(url);
+
             const data = await response.data;
-            console.log(data)
+            const values = getData(data);
+
+            return values;
+
         } catch (error) {
-            console.log(error)
+            console.log(error.message)
         }
     });
 };
 
-export { searchUser };
+const getData = (data) => {
+    const fullName = document.querySelector('[full_name]');
+    const login = document.querySelector('[login');
+    const joined = document.querySelector('[joined');
+
+    fullName.textContent = data.name;
+    login.textContent = `@${data.login}`
+    joined.textContent = `Joined ${data.created_at}`; // formatar data
+
+    console.log("aqui", data)
+};
+
+export { searchUser, getData };

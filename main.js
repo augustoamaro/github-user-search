@@ -5,6 +5,7 @@ import search from './assets/icon-search.svg';
 import dark from './assets/icon-moon.svg';
 
 import { searchUser } from './src/helpers/request.js'
+// import { getData } from './src/helpers/request.js'
 
 document.querySelector('#app').innerHTML = /*html*/`
   <main>
@@ -32,9 +33,9 @@ document.querySelector('#app').innerHTML = /*html*/`
       <img src="${search}">
 
       <div>
-        <h1></h1>
-        <h2>@octocat</h2>
-        <h3>Joined 25 Jan 2011</h3>
+        <h1 full_name></h1>
+        <h2 login></h2>
+        <h3 joined></h3>
       </div>
     </div>
     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
@@ -49,6 +50,8 @@ const input = document.querySelector('[username]')
 const searchBtn = document.querySelector('[search]')
 
 searchUser(input, searchBtn);
+
+// const fullName = document.querySelector('[full_name]');
 
 
 
