@@ -20,22 +20,34 @@ const updateUserValues = (value) => {
     const avatar = document.querySelector('[avatar]');
     const fullName = document.querySelector('[full_name]');
     const login = document.querySelector('[login');
-    const joined = document.querySelector('[joined');
+    const created_at = document.querySelector('[created_at');
     const bio = document.querySelector('[bio');
 
     const publicRepos = document.querySelector('[public_repos]');
     const followers = document.querySelector('[followers]');
     const following = document.querySelector('[following]');
 
-    avatar.setAttribute("src", value.avatar_url)
+    const location = document.querySelector('[location]');
+    const website = document.querySelector('[website]');
+    const twitter = document.querySelector('[twitter]');
+    const company = document.querySelector('[company]');
+
+    avatar.setAttribute("src", value.avatar_url);
     fullName.textContent = value.name;
     login.textContent = `@${value.login}`
-    joined.textContent = `Joined ${value.created_at}`; // formatar data
+
+    created_at.textContent = `Joined ${value.created_at}`;
+
     bio.textContent = value.bio === null ? "Sem bio" : value.bio;
 
     publicRepos.textContent = value.public_repos;
     followers.textContent = value.followers;
     following.textContent = value.following;
+
+    location.textContent = value.location;
+    website.textContent = value.html_url;
+    twitter.textContent = value.twitter_username === null ? "Não disponível" : value.twitter_username;
+    company.textContent = value.company;
 
 
     console.log("aqui", value)

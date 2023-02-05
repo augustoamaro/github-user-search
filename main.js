@@ -37,7 +37,7 @@ document.querySelector('#app').innerHTML = /*html*/`
         <div>
           <h1 full_name>The Octocat</h1>
           <h2 login>@octocat</h2>
-          <h3 joined>Joined 25 Jan 2011</h3>
+          <h3 created_at>Joined 25 Jan 2011</h3>
         </div>
       </div>
 
@@ -61,10 +61,22 @@ document.querySelector('#app').innerHTML = /*html*/`
       </div>
 
       <div class="icons">
-        <img src="${location}">
-        <img src="${website}">
-        <img src="${twitter}">
-        <img src="${company}">
+        <div class="location">
+          <img src="${location}">
+          <h2 location></h2>
+        </div>
+        <div class="website">
+          <img src="${website}">
+          <h2 website></h2>
+        </div>
+        <div class="twitter">
+          <img src="${twitter}">
+          <h2 twitter></h2>
+        </div>
+        <div class="company">
+          <img src="${company}">
+          <h2 company></h2>
+        </div>
       </div>
     </section>
   </main>
