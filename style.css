@@ -191,20 +191,23 @@ input {
 .icons {
   display: flex;
   flex-direction: column;
-
   width: 100%;
   margin-top: 24px;
-  padding-left: 48px;
+  padding-left: 48px;  
 }
 
 .icons div {
   display: flex;
   flex-direction: row;
   margin: 8px;
+
 }
 
 .location img {
   padding-right: 19.25px;
+}
+
+.website {
 }
 
 .website img,

@@ -1,12 +1,12 @@
 import './style.css';
 import './src/styles/reset.css';
 
-import search from './assets/icon-search.svg';
-import dark from './assets/icon-moon.svg';
-import location from './assets/icon-location.svg';
-import website from './assets/icon-website.svg';
-import twitter from './assets/icon-twitter.svg';
-import company from './assets/icon-company.svg';
+import search from './src/assets/icon-search.svg';
+import dark from './src/assets/icon-moon.svg';
+import location from './src/assets/icon-location.svg';
+import website from './src/assets/icon-website.svg';
+import twitter from './src/assets/icon-twitter.svg';
+import company from './src/assets/icon-company.svg';
 
 import { fetchUserData } from './src/helpers/request.js'
 
