@@ -8,7 +8,7 @@ import website from './src/assets/icon-website.svg';
 import twitter from './src/assets/icon-twitter.svg';
 import company from './src/assets/icon-company.svg';
 
-import { fetchUserData } from './src/helpers/request.js'
+import { fetchUserData } from './src/request.js'
 
 document.querySelector('#app').innerHTML = /*html*/`
   <main>
