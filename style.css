@@ -170,21 +170,19 @@ input {
   margin: 25px;
 }
 
-.repos h2,
-.followers h2,
-.following h2 {
+.repos h2, .followers h2, .following h2,
+.repos span, .followers span, .following span {
   font-family: 'Space Mono';
   font-style: normal;
+}
+
+.repos h2, .followers h2, .following h2 {
   font-weight: 400;
   font-size: 11px;
   color: #4B6A9B;
 }
 
-.repos span,
-.followers span,
-.following span {
-  font-family: 'Space Mono';
-  font-style: normal;
+.repos span, .followers span, .following span {
   font-weight: 700;
   font-size: 16px;
   color: #2B3442;
